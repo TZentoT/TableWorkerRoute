@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h5>{{ title }}</h5>
+        </div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" [style.width]=" '10%'" *ngIf="isIdUp">
+                <button class="border-0 btn-light" (click)="sortByIdDown(); isIdUp=false">&#9650; id</button>
+            </th>
+            <th scope="col" [style.width]=" '10%'" *ngIf="!isIdUp">
+                <button class="border-0 btn-light" (click)="sortByIdUp(); isIdUp=true">&#9660; id</button>
+            </th>
+            <th scope="col" [style.width]=" '200px'">Имя</th>
+            <th scope="col" [style.width]=" '200px'">Фамилия</th>
+            <th scope="col" [style.width]=" '200px'">Отчество</th>
+            <th scope="col" [style.width]=" '200px'">Почта</th>
+            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp==true">
+                <button class="border-0 btn-light" (click)="sortByAgeDown(); isAgeUp=false">&#9650; Возраст</button> 
+            </th>
+            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp==false">
+                <button class="border-0" (click)="sortByAgeUp(); isAgeUp=true">&#9660; Возраст</button> 
+            </th>
+            <th scope="col" [style.width]=" '200px'">Телефон</th>
+            <th scope="col" [style.width]=" '150px'"></th>
+          </tr>
+        </thead>
+        <tbody *ngIf="workers.length > 0">
+            <tr *ngFor="let worker of workers | sort: sortId : sortAge">
+                <th scope="row">&nbsp;{{ worker.id }}</th>
+                <th scope="row">{{ worker.name}}</th>
+                <th scope="row">{{ worker.surname}}</th>
+                <th scope="row">{{ worker.patronymic}}</th>
+                <th scope="row">{{ worker.email}}</th>
+                <th scope="row">&nbsp;  {{ getAge(worker.birthday) }}</th>
+                <th scope="row">{{ worker.phone}}</th>
+                <th>
+                    <button class="btn btn-outline-info btn-sm" (click)="onLinkProfile(worker.id)">Редактировать</button> 
+                </th>
+                <th>
+                    <button class="btn btn-outline-danger btn-sm" (click)="onDeleteWorker(worker.id)">Удалить</button>
+                </th>
+            </tr>  
+        </tbody>
+        <tbody *ngIf="workers.length == 0" >
+          <div [style.width]=" '200px'">
+            Ничего не найдено
+          </div>
+        </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h5>Список сотрудников</h5>
+        </div>
+        <br>
+        <div class="col-2 mb-3 ">
+            <h5 class="mt-4">Поиск</h5>
+            <input type="text" class="form-control" placeholder="Имя Фамилия" [(ngModel)]="searchStr">  
+        </div>
+        <div class="col-6 mb-3">
+            <h5 class="mt-4"> Добавить</h5>
+            <button class="btn btn-outline-success btn-sm" (click)="onAddWorker()">Добавить сотрудника</button>
+        </div>
+        <br>
+        <div class="col-12 mt-4">
+            <app-workers-list [title]=" 'IT отдел'" 
+            [workers]=" getByType(myWorkersType.IT) | search: searchStr"
+            (deleteWorker)="onDeleteWorker($event)"
+            ></app-workers-list>
+        </div>
+        <div class="col-12 mt-4">
+            <app-workers-list [title]=" 'Отдел продаж'" 
+            [workers]=" getByType(myWorkersType.sales) | search: searchStr"
+            (deleteWorker)="onDeleteWorker($event)"
+            ></app-workers-list>
+        </div>
+        <div class="col-12 mt-4">
+            <app-workers-list [title]=" 'Отдел доставки'" 
+            [workers]=" getByType(myWorkersType.delivery) | search: searchStr "
+            (deleteWorker)="onDeleteWorker($event)"
+            >
+            </app-workers-list>
+        </div>
+        <div class="col-12 mt-4">
+            <app-workers-list [title]=" 'Юридический отдел'" 
+            [workers]=" getByType(myWorkersType.legal) | search: searchStr"
+            (deleteWorker)="onDeleteWorker($event)"
+            >
+            </app-workers-list>
+        </div>
+    </div>
+</div>

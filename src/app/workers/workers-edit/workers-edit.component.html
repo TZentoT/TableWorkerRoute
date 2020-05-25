@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <ng-container [formGroup]="workerForm">
+        <div class="row mt-4">
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="id">Имя</label>
+                    <input type="text" class="form-control" placeholder="Имя" formControlName="name" id="name"/>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" class="form-control" placeholder="Фамилия" formControlName="surname" id="surname"/>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" class="form-control" placeholder="Отчество" formControlName="patronymic" id="patronymic" />
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="email">Почта</label>
+                    <input type="text" class="form-control" mask="A*@A*.S*" [dropSpecialCharacters]="false"
+                        placeholder="test@gmail.com" formControlName="email" id="email" />
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" class="form-control" mask="+0(000) 000-0000" [dropSpecialCharacters]="false"
+                        formControlName="phone" id="phone" />
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="birthday">Дата рождения</label>
+                    <input type="text" class="form-control" mask="d0/M0/0000" [dropSpecialCharacters]="false"
+                        formControlName="birthday" id="birthday" >
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="type">Отдел</label>
+                    <select class="custom-select" formControlName="type" id="type">
+                        <option [ngValue]="myWorkertype.IT">IT</option>
+                        <option [ngValue]="myWorkertype.sales">Продаж</option>
+                        <option [ngValue]="myWorkertype.delivery">Доставки</option>
+                        <option [ngValue]="myWorkertype.legal">Юридический</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="id">Номер</label>
+                    <input type="number" class="form-control" placeholder="id" formControlName="id" id="id">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-1">
+                <button class="btn btn-outline-success" [disabled]="workerForm.invalid" *ngIf="id == null"  (click)="isDataValid(true, false)">Добавить</button>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-outline-primary" [disabled]="workerForm.invalid" *ngIf="id != null" (click)="isDataValid(false, true)">Сохранить</button>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-outline-danger" *ngIf="id != null" (click)="deleteData()">Удалить</button>
+            </div>
+        </div>
+
+    </ng-container>
+</div>

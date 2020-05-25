@@ -1,0 +1,104 @@
+{
+  "workers": [
+    {
+      "id": 1,
+      "surname": "Иванов",
+      "name": "Иван",
+      "patronymic": "Иваныч",
+      "phone": "+4(902) 481-8540",
+      "email": "aaaa@gmail.com",
+      "birthday": "10/5/1989",
+      "type": 0
+    },
+    {
+      "id": 2,
+      "surname": "Сидроов",
+      "name": "Сидр",
+      "patronymic": "Сидорович",
+      "phone": "+5(985) 456-1581",
+      "email": "test@gmail.com",
+      "birthday": "20/8/1985",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "surname": "Петров",
+      "name": "Петр",
+      "patronymic": "Петрович",
+      "phone": "+8(971) 802-1125",
+      "email": "test@yandex.ru",
+      "birthday": "12/10/1988",
+      "type": 2
+    },
+    {
+      "id": 4,
+      "surname": "Александров",
+      "name": "Александр",
+      "patronymic": "Александрович",
+      "phone": "+7(902) 782-1258",
+      "email": "smth@yandex.ru",
+      "birthday": "25/7/1994",
+      "type": 3
+    },
+    {
+      "id": 5,
+      "name": "sds",
+      "surname": "sds",
+      "patronymic": "dsds",
+      "phone": "+5(652) 359-5236",
+      "email": "dsadasd@dfdf.com",
+      "birthday": "5/12/2000",
+      "type": 1
+    },
+    {
+      "id": 6,
+      "name": "sdsa",
+      "surname": "234",
+      "patronymic": "43",
+      "phone": "+1(456) 595-5329",
+      "email": "usc5hFx33n@gmail.com",
+      "birthday": "4/2/1988",
+      "type": 2
+    },
+    {
+      "id": 7,
+      "name": "sd2",
+      "surname": "2345",
+      "patronymic": "65656",
+      "phone": "+5(689) 774-5342",
+      "email": "r43454356@gma.com",
+      "birthday": "4/5/2010",
+      "type": 2
+    },
+    {
+      "id": 9,
+      "name": "sd",
+      "surname": "24",
+      "patronymic": "435",
+      "phone": "+6(587) 956-3442",
+      "email": "usc5hFx33n@gmail.com",
+      "birthday": "27/5/1996",
+      "type": 2
+    },
+    {
+      "id": 10,
+      "name": "234",
+      "surname": "657",
+      "patronymic": "7987",
+      "phone": "+5(478) 890-0998",
+      "email": "2234@ytyt.ru",
+      "birthday": "24/5/1996",
+      "type": 2
+    },
+    {
+      "id": 11,
+      "name": "ывфы",
+      "surname": "аыв",
+      "patronymic": "выа",
+      "phone": "+3(543) 456-6767",
+      "email": "usc5hFx33n@gmail.com",
+      "birthday": "26/5/2000",
+      "type": 0
+    }
+  ]
+}
