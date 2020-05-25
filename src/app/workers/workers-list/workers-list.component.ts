@@ -17,8 +17,8 @@ export class WorkersListComponent implements OnInit {
 
   @Output() deleteWorker = new EventEmitter<number>();
 
-  isIdUp: boolean = true
-  isAgeUp: boolean = true
+  isIdUp: number = 1;
+  isAgeUp: number = 0;
   sortId: number = 1;
   sortAge: number = 0;
   

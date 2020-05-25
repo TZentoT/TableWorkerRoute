@@ -6,21 +6,27 @@
         <table class="table">
         <thead>
           <tr>
-            <th scope="col" [style.width]=" '10%'" *ngIf="isIdUp">
-                <button class="border-0 btn-light" (click)="sortByIdDown(); isIdUp=false">&#9650; id</button>
+            <th scope="col" [style.width]=" '10%'" *ngIf="isIdUp == 1">
+                <button class="border-0 btn-light" (click)="sortByIdDown(); isIdUp=2; isAgeUp = 0">&#9650; id</button>
             </th>
-            <th scope="col" [style.width]=" '10%'" *ngIf="!isIdUp">
-                <button class="border-0 btn-light" (click)="sortByIdUp(); isIdUp=true">&#9660; id</button>
+            <th scope="col" [style.width]=" '10%'" *ngIf="isIdUp == 2">
+                <button class="border-0 btn-light" (click)="sortByIdUp(); isIdUp=1; isAgeUp = 0">&#9660; id</button>
+            </th>
+            <th scope="col" [style.width]=" '10%'" *ngIf="isIdUp == 0">
+                <button class="border-0 btn-light" (click)="sortByIdUp(); isIdUp=1; isAgeUp = 0"> id</button>
             </th>
             <th scope="col" [style.width]=" '200px'">Имя</th>
             <th scope="col" [style.width]=" '200px'">Фамилия</th>
             <th scope="col" [style.width]=" '200px'">Отчество</th>
             <th scope="col" [style.width]=" '200px'">Почта</th>
-            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp==true">
-                <button class="border-0 btn-light" (click)="sortByAgeDown(); isAgeUp=false">&#9650; Возраст</button> 
+            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp == 1">
+                <button class="border-0 btn-light" (click)="sortByAgeDown(); isAgeUp=2; isIdUp = 0">&#9650; Возраст</button> 
             </th>
-            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp==false">
-                <button class="border-0" (click)="sortByAgeUp(); isAgeUp=true">&#9660; Возраст</button> 
+            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp == 2">
+                <button class="border-0" (click)="sortByAgeUp(); isAgeUp=1; isIdUp = 0">&#9660; Возраст</button> 
+            </th>
+            <th scope="col" [style.width]=" '200px'"  *ngIf="isAgeUp == 0">
+                <button class="border-0" (click)="sortByAgeUp(); isAgeUp=1; isIdUp = 0"> Возраст</button> 
             </th>
             <th scope="col" [style.width]=" '200px'">Телефон</th>
             <th scope="col" [style.width]=" '150px'"></th>
