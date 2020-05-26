@@ -39,7 +39,7 @@
                 <th scope="row">{{ worker.surname}}</th>
                 <th scope="row">{{ worker.patronymic}}</th>
                 <th scope="row">{{ worker.email}}</th>
-                <th scope="row">&nbsp;  {{ getAge(worker.birthday) }}</th>
+                <th scope="row">&nbsp;  {{ getAge(worker.birthday) | age  }}</th>
                 <th scope="row">{{ worker.phone}}</th>
                 <th>
                     <button class="btn btn-outline-info btn-sm" (click)="onLinkProfile(worker.id)">Редактировать</button> 

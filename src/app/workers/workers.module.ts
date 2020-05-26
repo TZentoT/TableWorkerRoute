@@ -9,11 +9,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from '../shared/pipes/search.pipe';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { SortPipe } from '../shared/pipes/sort.pipe';
+import { AgePipe } from '../shared/pipes/age.pipe';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
-  declarations: [WorkersComponent, WorkersListComponent, WorkersEditComponent, SearchPipe, SortPipe],
+  declarations: [WorkersComponent, WorkersListComponent, WorkersEditComponent, SearchPipe, SortPipe, AgePipe],
   imports: [
     CommonModule,
     WorkersRoutingModule,

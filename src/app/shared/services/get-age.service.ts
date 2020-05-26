@@ -65,7 +65,9 @@ export class GetAgeService {
     let now = new Date();
     let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     let dob = new Date(year, month - 1, day); // дата рождения
+    let start = new Date(now.getFullYear()-120, now.getMonth(), now.getDate());
     if (dob > today) return false
+    else if (start > dob) return false
     else return true
   }
 }
